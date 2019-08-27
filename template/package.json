@@ -24,9 +24,9 @@
     "lint:fix": "eslint --ext .js,.vue src{{#unit}} test/unit{{/unit}}{{#e2e}} test/e2e/specs{{/e2e}} --fix",
     {{/lint}}
     "build": "node webpack/build.js"{{#multipleServer}},
-    "build:dev": "cross-env NODE_ENV=development npm run build",
-    "build:test": "cross-env NODE_ENV=test npm run build",
-    "build:production": "cross-env NODE_ENV=production npm run build"{{/multipleServer}}
+    "build:dev": "cross-env BUILD_NODE_ENV=DEVELOPMENT_API npm run build",
+    "build:test": "cross-env BUILD_NODE_ENV=TEST_API npm run build",
+    "build:production": "cross-env BUILD_NODE_ENV=PRODUCTION_API npm run build"{{/multipleServer}}
   },
   "dependencies": {
     "vue": "^2.5.17"{{#router}},
